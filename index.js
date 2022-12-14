@@ -1,3 +1,7 @@
+// (c) Copyright Merative US L.P. and others 2020-2022 
+//
+// SPDX-Licence-Identifier: Apache 2.0
+
 const http = require('http');
 const httpProxy = require('http-proxy');
 
@@ -26,4 +30,6 @@ http.createServer(function (req, res) {
         res.end('ok');
         return;
     }
+    res.writeHead(404);
+    res.end('Route not found');
 }).listen(port);
