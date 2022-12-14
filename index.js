@@ -26,4 +26,6 @@ http.createServer(function (req, res) {
         res.end('ok');
         return;
     }
+    res.writeHead(404);
+    res.end('Route not found');
 }).listen(port);
