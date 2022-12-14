@@ -8,9 +8,13 @@
 
 [↳ Prerequisites](#prerequisites)
 
+[↳ Testing With the Proxy](#prerequisites)
+
+[↳ Testing](#testing)
+
 ## Introduction
 
-Merative<sup>®</sup> provides this application for [Digital Health Pass](https://www.ibm.com/products/digital-health-pass/ "Digital Health Pass") mobile wallet and verifier app testing on a local environment without requiring external cloud services.
+Merative<sup>®</sup> provides this application for [Digital Health Pass](https://www.ibm.com/products/digital-health-pass/ "Digital Health Pass") mobile wallet and verifier app testing on a local environment without requiring external cloud services.  This application services has a proxy for all mobile requests to DHP API.  Endpoint stubs are provided for the Verifier Configuration and Metering services.
 
 [↑ Top](#readme)
 
@@ -62,5 +66,33 @@ A mobile device is required to be connected via a USB cable to run the apps from
 Instructions TBD
 
 https://github.com/digitalhealthpass/dhp-ios-app
+
+[↑ Top](#readme)
+
+## Testing
+
+Once the prerequisites are met follow these steps in order to test the mobile app against the testing proxy.
+
+- Start DHP API.
+```
+cd dhp-api
+npm run start
+```
+
+- Start DHP Testing Proxy.
+```
+cd dhp-testing-proxy
+npm run start
+```
+
+- Android
+	- Connect an Android device to the dev machine via a USB cable.
+	- Select the appropriate build variant in Android Studio.
+	- Press play in Android Studio.
+	- Follow the instructions on the app ensuring you select the environment where the testing proxy is running.
+	- Create QR codes from Postman and begin scanning.
+	
+-iOS
+	- TBD	
 
 [↑ Top](#readme)
