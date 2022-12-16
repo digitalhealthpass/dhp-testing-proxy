@@ -52,7 +52,7 @@ Download [Postman](https://www.postman.com/downloads/) then import the collectio
 
 ### Android Wallet and Verifier
 
-A mobile device is required to be connected via a USB cable to run the apps from Android Studio. [Developer options and USB-debugging](https://developer.android.com/studio/debug/dev-options#:~:text=Enable%20developer%20options%20and%20USB%20debugging,-Figure%201.&text=To%20enable%20developer%20options%2C%20tap,Settings%20%3E%20About%20Phone%20%3E%20Build%20Number) must be enabled on the device.
+An Android device is required to be connected via a USB cable to run the apps from Android Studio. [Developer options and USB-debugging](https://developer.android.com/studio/debug/dev-options#:~:text=Enable%20developer%20options%20and%20USB%20debugging,-Figure%201.&text=To%20enable%20developer%20options%2C%20tap,Settings%20%3E%20About%20Phone%20%3E%20Build%20Number) must be enabled on the device.
 
 - Download and install [Android Studio](https://developer.android.com/studio).
 - Clone the [DHP Android](https://github.com/digitalhealthpass/dhp-android-app) repo and open it with Android Studio.
@@ -63,9 +63,14 @@ A mobile device is required to be connected via a USB cable to run the apps from
 
 ### iOS Wallet and Verifier
 
-Instructions TBD
+An iOS device is required to be connected via a USB cable to run the apps from xCode.
 
-https://github.com/digitalhealthpass/dhp-ios-app
+- Install [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) from the App Store.
+- Clone the [DHP iOS App](https://github.com/digitalhealthpass/dhp-ios-app) repo and open it with Xcode.
+- Modify the code like [this](https://github.com/digitalhealthpass/dhp-ios-app/compare/run-against-local-testing-proxy) branch demonstrates to add the IP address where DHP testing proxy is running.
+- When the app initially starts you will be prompted with a list of environments.  Select the one added above.
+- Switch the executing project to `Holder` to run the wallet app.
+- Switch the executing project to `Verifier` to run the verifier app.
 
 [↑ Top](#readme)
 
@@ -88,11 +93,15 @@ npm run start
 - Android
 	- Connect an Android device to the dev machine via a USB cable.
 	- Select the appropriate build variant in Android Studio.
-	- Press play in Android Studio.
+	- Press the play in button Android Studio.
 	- Follow the instructions on the app ensuring you select the environment where the testing proxy is running.
 	- Create QR codes from Postman and begin scanning.
 	
 -iOS
-	- TBD	
+	- Connect an iOS device to the dev machine via a USB cable.
+	- Select the appropriate project in Xcode.
+	- Press the play in button Xcode.
+	- Follow the instructions on the app ensuring you select the environment where the testing proxy is running.
+	- Create QR codes from Postman and begin scanning.
 
 [↑ Top](#readme)
