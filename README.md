@@ -14,7 +14,7 @@
 
 ## Introduction
 
-Merative<sup>®</sup> provides this application for [Digital Health Pass](https://www.ibm.com/products/digital-health-pass/ "Digital Health Pass") mobile wallet and verifier app testing on a local environment without requiring external cloud services.  This application services has a proxy for all mobile requests to DHP API.  Endpoint stubs are provided for the Verifier Configuration and Metering services.
+Merative<sup>®</sup> provides this application for [Digital Health Pass](https://www.ibm.com/products/digital-health-pass/ "Digital Health Pass") mobile wallet and verifier app testing on a local environment without requiring external cloud services.  This application is a proxy for all mobile requests to DHP API.  Endpoint stubs are provided for the Verifier Configuration and Metering services.
 
 [↑ Top](#readme)
 
